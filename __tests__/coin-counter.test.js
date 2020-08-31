@@ -1,16 +1,10 @@
 import { coinCounter } from './../src/coin-counter.js';
-import { findChange } from './../src/coin-counter.js';
 import { findQuarters } from './../src/coin-counter.js';
 import { findDimes } from './../src/coin-counter.js';
 import { findNickels } from './../src/coin-counter.js';
 import { findPennies } from './../src/coin-counter.js';
 
 describe ('coinCounter', () => {
-
-  // test('should correctly calculate change needed', () => {
-  //   const number = 4.99;
-  //   expect(findChange(number)).toEqual(.01);
-  // });
 
   test('should correctly calculate quarters needed to make change', () => {
     const number = 1;
@@ -41,4 +35,11 @@ describe ('coinCounter', () => {
     const number = 1.59;
     expect(findPennies(number)).toEqual(159);
   });
+
+  test('should correctly calculate change needed', () => {
+    const number = 3.84;
+    expect(coinCounter(number)).toEqual("15 Quarters, 1 Nickel and 4 Pennies");
+  });
 });
+
+//"15 Quarters, 1 Nickel and 4 Pennies"
