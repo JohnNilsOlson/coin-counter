@@ -4,6 +4,6 @@ describe ('coinCounter', () => {
 
   test('should correctly calculate change needed', () => {
     const number = 4.99;
-    expect(coinCounter(number).toEqual(.01));
+    expect(coinCounter(number)).toEqual(.01);
   });
 });
