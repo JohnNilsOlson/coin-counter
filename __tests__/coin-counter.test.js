@@ -3,6 +3,7 @@ import { findChange } from './../src/coin-counter.js';
 import { findQuarters } from './../src/coin-counter.js';
 import { findDimes } from './../src/coin-counter.js';
 import { findNickels } from './../src/coin-counter.js';
+import { findPennies } from './../src/coin-counter.js';
 
 describe ('coinCounter', () => {
 
@@ -34,5 +35,10 @@ describe ('coinCounter', () => {
   test('should correctly calculate nickels needed to make change', () => {
     const number = 1.59;
     expect(findNickels(number)).toEqual(31);
+  });
+
+  test('should correctly calculate pennies needed to make change', () => {
+    const number = 1.59;
+    expect(findPennies(number)).toEqual(159);
   });
 });

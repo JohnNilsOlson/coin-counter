@@ -11,13 +11,13 @@ export const findQuarters = (number) => {
 }
 
 export const findDimes = (number) => {
-  return Math.floor(number / .10 )
+  return Math.floor(number/.10);
 }
 
 export const findNickels = (number) => {
-  return Math.floor(number / .05 )
+  return Math.floor(number/.05);
 }
 
-const findPennies = () => {
-
+export const findPennies = (number) => {
+  return Math.floor(number/.01);
 }
