@@ -1,26 +1,13 @@
-// export const recursiveCoinCounter = (number, coins) => {
-//   if (number === 0) {
-//     return [0,[]];
-//   } else {
-    
-//   }
-// }
-
-export const findQuarters = (number) => {
-  return Math.floor(number/.25);
+export const coinCounter = (coinToCountBy) => {
+  return (amount) => {
+    return Math.floor(amount/coinToCountBy);
+  }
 }
 
-export const findDimes = (number) => {
-  return Math.floor(number/.10);
-}
-
-export const findNickels = (number) => {
-  return Math.floor(number/.05);
-}
-
-export const findPennies = (number) => {
-  return Math.floor(number/.01);
-}
+export const findQuarters = coinCounter(.25);
+export const findDimes = coinCounter(.10);
+export const findNickels = coinCounter(.05);
+export const findPennies = coinCounter(.01);
 
 export const recursiveCoinCounter = (number,counter=0,coinArray=[]) => {
   const coins=[.25, .10, .05, .01]
