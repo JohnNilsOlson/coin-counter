@@ -1,6 +1,7 @@
 import { coinCounter } from './../src/coin-counter.js';
 import { findChange } from './../src/coin-counter.js';
 import { findQuarters } from './../src/coin-counter.js';
+import { findDimes } from './../src/coin-counter.js';
 
 describe ('coinCounter', () => {
 
@@ -22,5 +23,10 @@ describe ('coinCounter', () => {
   test('should correctly calculate quarters needed to make change', () => {
     const number = 1.59;
     expect(findQuarters(number)).toEqual(6);
+  });
+
+  test('should correctly calculate quarters needed to make change', () => {
+    const number = 1.59;
+    expect(findDimes(number)).toEqual(15);
   });
 });

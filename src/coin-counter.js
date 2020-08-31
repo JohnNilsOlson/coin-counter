@@ -10,7 +10,7 @@ export const findQuarters = (number) => {
   return Math.floor(number/.25);
 }
 
-const findDimes = (number) => {
+export const findDimes = (number) => {
   return Math.floor(number / .10 )
 }
 
