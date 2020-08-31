@@ -9,6 +9,18 @@ export const findDimes = coinCounter(.10);
 export const findNickels = coinCounter(.05);
 export const findPennies = coinCounter(.01);
 
+export const closureCoinCounter = (amount) => {
+  let coinArray = [];
+  coinArray.push(findQuarters(amount));
+  coinArray.push(findDimes((amount-coinArray[0] * .25 ).toFixed(2)));
+  coinArray.push(findNickels((amount-coinArray[0] * .25 - coinArray[1] * .10).toFixed(2)));
+  coinArray.push(findPennies((amount-coinArray[0] * .25 - coinArray[1] * .10 - coinArray[2] * .05).toFixed(2)));
+  return coinArray;
+}
+
+
+
+
 export const recursiveCoinCounter = (number,counter=0,coinArray=[]) => {
   const coins=[.25, .10, .05, .01]
 
