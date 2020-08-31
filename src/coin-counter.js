@@ -14,8 +14,8 @@ export const findDimes = (number) => {
   return Math.floor(number / .10 )
 }
 
-const findNickels = () => {
-
+export const findNickels = (number) => {
+  return Math.floor(number / .05 )
 }
 
 const findPennies = () => {
